@@ -20,4 +20,19 @@ public class DrumTest {
   public void canPlay(){
     assertEquals("Dumm dumm dumm", drum.play());
   }
+
+  @Test
+  public void hasMaterial(){
+    assertEquals("Plastic", drum.getMaterial());
+  }
+
+  @Test
+  public void hasColor(){
+    assertEquals("Yello", drum.getColor());
+  }
+
+  @Test
+  public void hasType(){
+    assertEquals("Damroo", drum.getType());
+  }
 }
