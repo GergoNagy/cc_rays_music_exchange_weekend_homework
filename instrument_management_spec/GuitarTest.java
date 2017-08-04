@@ -8,7 +8,7 @@ public class GuitarTest {
 
   @Before
   public void before(){
-    guitar = new Guitar(9);
+    guitar = new Guitar("Wood", "Red", "Electric", 9);
   }
 
   @Test
@@ -19,6 +19,11 @@ public class GuitarTest {
   @Test
   public void canPlay(){
     assertEquals("Aaaa", guitar.play());
+  }
+
+  @Test
+  public void hasMaterial(){
+    assertEquals("Wood", guitar.getMaterial());
   }
     
 }
