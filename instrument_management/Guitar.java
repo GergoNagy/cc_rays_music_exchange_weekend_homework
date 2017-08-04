@@ -1,7 +1,7 @@
 package instrument_management;
 import behaviours.*;
 
-public class Guitar extends Instrument  {
+public class Guitar extends Instrument implements Playable, Sellable {
     
   int numberOfStrings;
 
@@ -16,6 +16,10 @@ public class Guitar extends Instrument  {
 
   public String play(){
     return "Aaaa";
+  }
+
+  public int calculateMarkup(){
+    return sellPrice - buyPrice;
   }
 
 }

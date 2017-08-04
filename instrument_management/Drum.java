@@ -1,7 +1,7 @@
 package instrument_management;
 import behaviours.*;
 
-public class Drum extends Instrument  {
+public class Drum extends Instrument implements Playable, Sellable {
 
   int numberOfDrums;
 
@@ -16,5 +16,9 @@ public class Drum extends Instrument  {
 
   public String play(){
     return "Dumm dumm dumm";
+  }
+
+  public int calculateMarkup(){
+    return sellPrice - buyPrice;
   }
 }

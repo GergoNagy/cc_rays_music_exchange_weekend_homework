@@ -45,5 +45,10 @@ public class GuitarTest {
   public void sellingPrice(){
     assertEquals(350, guitar.getSellPrice());
   }
+
+  @Test
+  public void profitOnSell(){
+    assertEquals(110, guitar.calculateMarkup());
+  }
     
 }

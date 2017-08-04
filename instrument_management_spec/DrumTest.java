@@ -46,4 +46,9 @@ public class DrumTest {
     assertEquals(170, drum.getSellPrice());
   }
 
+  @Test
+  public void profitOnSell(){
+    assertEquals(50, drum.calculateMarkup());
+  }
+
 }

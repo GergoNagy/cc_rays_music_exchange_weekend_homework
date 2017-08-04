@@ -1,7 +1,7 @@
 package instrument_management;
 import behaviours.*;
 
-public class Piano extends Instrument  {
+public class Piano extends Instrument implements Playable, Sellable{
 
   int numberOfKeys;
 
@@ -16,5 +16,9 @@ public class Piano extends Instrument  {
 
   public String play(){
     return "Dandadadaannn";
+  }
+
+  public int calculateMarkup(){
+    return sellPrice - buyPrice;
   }
 }
