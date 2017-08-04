@@ -8,7 +8,7 @@ public class DrumTest {
 
   @Before
   public void before(){
-    drum = new Drum(12);
+    drum = new Drum("Plastic", "Yello", "Damroo",12);
   }
 
   @Test
