@@ -33,4 +33,12 @@ public class Shop {
   public void removeOneFromStock(Sellable sellable){
     this.stock.remove(sellable);
   }
+
+  public int allProfit(){
+    int profit = 0 ;
+    for (int i = 0; i < this.stock.size() ; i++ ) {
+      profit += this.stock.get(i).calculateMarkup();
+    }
+    return profit;
+  }
 }

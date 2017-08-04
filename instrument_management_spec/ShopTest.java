@@ -39,4 +39,11 @@ public class ShopTest {
     shop.removeOneFromStock(drum);
     assertEquals(1, shop.stockCount());
   }
+
+  @Test
+  public void countTheAllProfit(){
+    shop.stock(drum);
+    shop.stock(guitar);
+    assertEquals(160, shop.allProfit());
+  }
 }
