@@ -8,7 +8,7 @@ public class DrumTest {
 
   @Before
   public void before(){
-    drum = new Drum("Plastic", "Yello", "Damroo",12);
+    drum = new Drum("Plastic", "Yello", "Damroo",120, 170,12);
   }
 
   @Test
@@ -35,4 +35,15 @@ public class DrumTest {
   public void hasType(){
     assertEquals("Damroo", drum.getType());
   }
+
+  @Test
+  public void buyingPrice(){
+    assertEquals(120, drum.getBuyPrice());
+  }
+
+  @Test
+  public void sellingPrice(){
+    assertEquals(170, drum.getSellPrice());
+  }
+
 }

@@ -8,7 +8,7 @@ public class PianoTest {
 
   @Before
   public void before(){
-    piano = new Piano("Wood", "Black", "Classic", 80);
+    piano = new Piano("Wood", "Black", "Classic", 500, 690, 80);
   }
 
   @Test
@@ -34,5 +34,15 @@ public class PianoTest {
   @Test
   public void hasType(){
     assertEquals("Classic", piano.getType());
+  }
+
+  @Test
+  public void buyingPrice(){
+    assertEquals(500, piano.getBuyPrice());
+  }
+
+  @Test
+  public void sellingPrice(){
+    assertEquals(690, piano.getSellPrice());
   }
 }

@@ -1,12 +1,12 @@
 package instrument_management;
 import behaviours.*;
 
-public class Piano extends Instrument {
+public class Piano extends Instrument  {
 
   int numberOfKeys;
 
-  public Piano(String material, String color, String type, int numberOfKeys){
-    super(material, color, type);
+  public Piano(String material, String color, String type, int buyPrice, int sellPrice, int numberOfKeys){
+    super(material, color, type, buyPrice, sellPrice);
     this.numberOfKeys = numberOfKeys;
   }
 
