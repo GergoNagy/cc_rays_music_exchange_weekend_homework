@@ -4,14 +4,18 @@ import java.util.*;
 
 public class Shop {
 
+  InstrumentType type;
   String name;
   ArrayList<Playable> instrument;
   ArrayList<Sellable> stock;
+  
 
-  public Shop(String name){
+  public Shop(InstrumentType type, String name){
+    this.type = type;
     this.name = name;
     this.instrument = new ArrayList<Playable>();
     this.stock = new ArrayList<Sellable>();
+    
   }
 
   public String getName(){
@@ -40,5 +44,9 @@ public class Shop {
       profit += this.stock.get(i).calculateMarkup();
     }
     return profit;
+  }
+
+  public InstrumentType getType() {
+    return this.type;
   }
 }

@@ -12,7 +12,7 @@ public class ShopTest {
   public void before(){
     drum = new Drum("Plastic", "Yello", "Damroo",120, 170,12);
     guitar = new Guitar("Wood", "Red", "Electric", 240, 350, 9);
-    shop = new Shop("Ray's Music Exchange");
+    shop = new Shop(InstrumentType.DRUMS, "Ray's Music Exchange");
   }
 
   @Test
@@ -45,5 +45,10 @@ public class ShopTest {
     shop.stock(drum);
     shop.stock(guitar);
     assertEquals(160, shop.allProfit());
+  }
+
+  @Test
+  public void canGetType(){
+    assertEquals(InstrumentType.DRUMS, shop.getType());
   }
 }
